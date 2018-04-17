@@ -1,0 +1,4 @@
+1. run ``make'' to get the lib files
+2. run ``gen_training.py'' to generate data for training
+3. run ``gen_model.py'' to train the models
+4. run ``attack.py'' to check the attack

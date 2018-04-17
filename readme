@@ -1,0 +1,4 @@
+Scripts for the statistical attack presented in ``Learning Strikes Again: the Case of the DRS Signature Scheme''.
+
+In the file ``direct_attack'', one can directly run ``attack.py'' to check the attack without training new models.
+In the file ``full_attack'', complete scripts are provided for generating training set, training models and guessing coefficients.
