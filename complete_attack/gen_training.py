@@ -9,6 +9,7 @@ import _ctypes
 import matplotlib.pyplot as plt
 from math import sqrt
 from copy import copy
+import os
 
 # System params
 
@@ -84,6 +85,9 @@ def generate_training(append):
 
     print "stored to files"
 
+
+if os.path.exists('./training') == False:
+    os.makedirs('./training')
 for k in range(keys_start, keys_end):
     print
     print "Key ", k, " / ", keys_end

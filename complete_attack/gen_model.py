@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from math import sqrt
 from copy import copy
 import gc
+import os
 
 # System params
 
@@ -25,6 +26,9 @@ block_count = 2
 blocks = []
 renormalize_lstsq = False  # True
 
+
+if os.path.exists('./model') == False:
+    os.makedirs('./model')
 
 for i in range(block_count):
     a = max(1, i * n / block_count)

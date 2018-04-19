@@ -9,6 +9,7 @@ import _ctypes
 import matplotlib.pyplot as plt
 from math import sqrt
 from copy import copy
+import os
 
 # System params
 
@@ -65,8 +66,13 @@ def generate_leak(S, samples):
     return feature_matrices
 
 
-idx_range = xrange(10)  # instance indices
+idx_range = xrange(2)  # instance indices
 samples = 200000  # sample size per instance
+
+if os.path.exists('./attack/data') == False:
+	os.makedirs('./attack/data')
+if os.path.exists('./attack/graph') == False:
+	os.makedirs('./attack/graph')
 
 for idx in idx_range:
     print "current instance", idx

@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from math import sqrt
 from copy import copy
 
+import os
+
 # System params
 
 n = 912
@@ -75,6 +77,11 @@ def load_models():
 
 idx_range = xrange(10)  # instance indices
 samples = 200000  # sample size per instance
+
+if os.path.exists('./attack/data') == False:
+    os.makedirs('./attack/data')
+if os.path.exists('./attack/graph') == False:
+    os.makedirs('./attack/graph')
 
 for idx in idx_range:
     print "current instance", idx
