@@ -1,13 +1,7 @@
-1. run ``make'' to get the lib files
-2. run ``gen_training.py'' to generate data for training
-3. run ``gen_model.py'' to train the models
-4. run ``attack.py'' to check the attack
-
-The outputs of ``attack.py'' are included in the folder ``attack'':
-
 The graphs for *scaled weights* are stored in the folder ``attack/graph''.
 
 Experimental results are stored in the folder ``attack/data''.
+
 ``S i.dat' includes the secret matrix of the i-th instance.
 ``guess i_j.dat'' includes the guess of the secret matrix of the i-th instance and experimental results measure over j samples.
 ``stat i.dat'' includes the statistics of sign prediction for large coefficients:
