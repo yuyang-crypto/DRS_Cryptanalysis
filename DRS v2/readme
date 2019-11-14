@@ -1,0 +1,3 @@
+It suffices to run ``full_attack_all.sh'' to mount the complete learning attack.
+
+The files in the directory ``.\sk'' are used for key generation. Particularly, files in ``\sk\#nonzero'' give the number of non-zero elements in each row of the secret matrix.
