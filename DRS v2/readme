@@ -1,3 +1,17 @@
-It suffices to run ``full_attack_all.sh'' to mount the complete learning attack.
 
-The files in the directory ``.\sk'' are used for key generation. Particularly, files in ``\sk\#nonzero'' give the number of non-zero elements in each row of the secret matrix.
+1. Generating DRS instances for training and testing. 
+Relevant scripts are put in the directory ``.\sk''. One may select the parameter n in ``KeyGen.py''. 
+Files in ``\sk\#nonzero'' give the number of non-zero elements in each row of the secret matrix.
+
+2. Compiling the library files
+This can be done by run the shell script ``.\clib\makeall.sh''.
+Note that on some machines, the encoding of shell scripts may be different, which could affect the execution.
+To fix this issue, it suffices to run ``sed -i 's/\r//' makeall.sh'' before the execution. 
+
+3. Mounting the complete attack
+It suffices to run ``full_attack_all.sh'' to mount the complete learning attack, including collecting training samples, model training and model testing. One can also run ``full_attack_one.sh'' only for specific parameter (n, log2(N)).
+
+The models are stored in ``.\model'', and the guesses of secret keys are stored in ``.\attack''
+
+Note that one should create a local folder ``log'' used for storing the log information before the execution.
+Again, the encoding issue of shell scripts on different machines can be fixed by ``sed -i 's/\r//' ***.sh''.
